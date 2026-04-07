@@ -21,9 +21,9 @@ echo "Installing dependencies..."
 cd hello-nextjs && npm install && cd ..
 
 # Start development server in background
-echo "Starting development server..."
+echo "Starting development server on port 1008..."
 cd hello-nextjs
-npm run dev &
+PORT=1008 npm run dev &
 SERVER_PID=$!
 cd ..
 
@@ -32,6 +32,6 @@ echo "Waiting for server to start..."
 sleep 3
 
 echo -e "${GREEN}✓ Initialization complete!${NC}"
-echo -e "${GREEN}✓ Dev server running at http://localhost:3000 (PID: $SERVER_PID)${NC}"
+echo -e "${GREEN}✓ Dev server running at http://localhost:1008 (PID: $SERVER_PID)${NC}"
 echo ""
 echo "Ready to continue development."
